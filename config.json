@@ -1,0 +1,216 @@
+{
+	"width_comment": "em size = 1000, regardless of source font’s",
+	"width": 600,
+
+	"familyOrder": [ "mono", "term" ],
+	"family_property_comment": {
+		"isMono": "sanitise symbols from SHS, should be set to `true`",
+		"isTerm": "prefer spaces, dashes, quotation marks from latin font",
+		"isType": "make em dash from SHS full-width, has no effect if `isTerm` set to `true` (in this condition em dash is from latin font)"
+	},
+	"families": {
+		"mono": {
+			"isMono": true,
+			"isTerm": true,
+			"latinGroup": "SourceCodeVariable",
+			"naming": {
+				"en_US": "Milky Han Mono",
+				"zh_CN": "星汉等宽",
+				"zh_TW": "星漢等寬",
+				"zh_HK": "星漢等寬",
+				"ja_JP": "星漢等幅",
+				"ko_KR": "성한 고정폭"
+			}
+		},
+		"term": {
+			"isMono": true,
+			"isTerm": true,
+			"latinGroup": "SourceCodeVariable",
+			"naming": {
+				"en_US": "Milky Han Term",
+				"zh_CN": "Milky Han Term",
+				"zh_TW": "Milky Han Term",
+				"zh_HK": "Milky Han Term",
+				"ja_JP": "Milky Han Term",
+				"ko_KR": "Milky Han Term"
+			}
+		}
+	},
+
+	"styleOrder": [
+		"extralight", "extralightitalic",
+		"light", "lightitalic",
+		"normal", "normalitalic",
+		"regular", "italic",
+		"medium", "mediumitalic",
+		"bold", "bolditalic",
+		"heavy", "heavyitalic"
+	],
+	"styles": {
+		"extralight": {
+			"suffix": "-Roman",
+			"variation": { "wght": 200 },
+			"name": "Extralight"
+		},
+		"extralightitalic": {
+			"suffix": "-Italic",
+			"variation": { "wght": 200 },
+			"name": "Extralight Italic",
+			"uprightStyleMap": "extralight"
+		},
+		"light": {
+			"suffix": "-Roman",
+			"variation": { "wght": 300 },
+			"name": "Light"
+		},
+		"lightitalic": {
+			"suffix": "-Italic",
+			"variation": { "wght": 300 },
+			"name": "Light Italic",
+			"uprightStyleMap": "light"
+		},
+		"normal": {
+			"suffix": "-Roman",
+			"variation": { "wght": 372 },
+			"name": "Normal"
+		},
+		"normalitalic": {
+			"suffix": "-Italic",
+			"variation": { "wght": 372 },
+			"name": "Normal Italic",
+			"uprightStyleMap": "normal"
+		},
+		"regular": {
+			"suffix": "-Roman",
+			"variation": { "wght": 400 },
+			"name": "Regular"
+		},
+		"italic": {
+			"suffix": "-Italic",
+			"variation": { "wght": 400 },
+			"name": "Italic",
+			"uprightStyleMap": "regular"
+		},
+		"medium": {
+			"suffix": "-Roman",
+			"variation": { "wght": 500 },
+			"name": "Medium"
+		},
+		"mediumitalic": {
+			"suffix": "-Italic",
+			"variation": { "wght": 500 },
+			"name": "Medium Italic",
+			"uprightStyleMap": "medium"
+		},
+		"bold": {
+			"suffix": "-Roman",
+			"variation": { "wght": 700 },
+			"name": "Bold"
+		},
+		"bolditalic": {
+			"suffix": "-Italic",
+			"variation": { "wght": 700 },
+			"name": "Bold Italic",
+			"uprightStyleMap": "bold"
+		},
+		"heavy": {
+			"suffix": "-Roman",
+			"variation": { "wght": 900 },
+			"name": "Heavy"
+		},
+		"heavyitalic": {
+			"suffix": "-Italic",
+			"variation": { "wght": 900 },
+			"name": "Heavy Italic",
+			"uprightStyleMap": "heavy"
+		}
+	},
+
+	"subfamilyOrder": {
+		"cjk": [ "cl", "sc", "tc", "hc", "j", "k" ],
+		"cn": [ "cn" ],
+		"tw": [ "tw" ],
+		"hk": [ "hk" ],
+		"jp": [ "jp" ],
+		"kr": [ "kr" ]
+	},
+	"ttcMode_comment": {
+		"normal": "normal mode, merge and share `loca` and `glyf` table",
+		"gap": "gap mode, share `glyf` table with different `loca` table, support more than 65535 glyphs",
+		"mixed": "merge families with normal mode, merge subfamilies with gap mode"
+	},
+	"ttcMode": {
+		"cjk": "mixed",
+		"cn": "normal",
+		"tw": "normal",
+		"hk": "normal",
+		"jp": "normal",
+		"kr": "normal"
+	},
+	"subfamilies": {
+		"cl": { "name": "CL" },
+		"sc": { "name": "SC" },
+		"tc": { "name": "TC" },
+		"hc": { "name": "HC" },
+		"j" : { "name": "J"  },
+		"k" : { "name": "K"  },
+		"cn": { "name": "CN" },
+		"tw": { "name": "TW" },
+		"hk": { "name": "HK" },
+		"jp": { "name": "JP" },
+		"kr": { "name": "KR" }
+	},
+	"os2encodings": {
+		"cl": { "gbk": true, "big5": true, "jis": true, "korean": true },
+		"sc": { "gbk": true, "big5": true, "jis": true, "korean": true },
+		"tc": { "gbk": true, "big5": true, "jis": true, "korean": true },
+		"hc": { "gbk": true, "big5": true, "jis": true, "korean": true },
+		"j" : { "gbk": true, "big5": true, "jis": true, "korean": true },
+		"k" : { "gbk": true, "big5": true, "jis": true, "korean": true },
+		"cn": { "gbk": true , "big5": false, "jis": false, "korean": false },
+		"tw": { "gbk": false, "big5": true , "jis": false, "korean": false },
+		"hk": { "gbk": false, "big5": true , "jis": false, "korean": false },
+		"jp": { "gbk": false, "big5": false, "jis": true , "korean": false },
+		"kr": { "gbk": false, "big5": false, "jis": false, "korean": true  }
+	},
+	"nameTupleSelector": {
+		"cl": [ "en_US", "ja_JP", "ko_KR", "zh_CN", "zh_TW", "zh_HK" ],
+		"sc": [ "en_US", "ja_JP", "ko_KR", "zh_CN", "zh_TW", "zh_HK" ],
+		"tc": [ "en_US", "ja_JP", "ko_KR", "zh_CN", "zh_TW", "zh_HK" ],
+		"hc": [ "en_US", "ja_JP", "ko_KR", "zh_CN", "zh_TW", "zh_HK" ],
+		"j" : [ "en_US", "ja_JP", "ko_KR", "zh_CN", "zh_TW", "zh_HK" ],
+		"k" : [ "en_US", "ja_JP", "ko_KR", "zh_CN", "zh_TW", "zh_HK" ],
+		"cn": [ "en_US", "zh_CN" ],
+		"tw": [ "en_US", "zh_TW" ],
+		"hk": [ "en_US", "zh_HK" ],
+		"jp": [ "en_US", "ja_JP" ],
+		"kr": [ "en_US", "ko_KR" ]
+	},
+	"copyright": "Copyright © 2019–2020 Cyano Hao. Portions Copyright 2015-2019, Renzhi Li (a.k.a. Belleve Invis, belleve@typeof.net). Portions © 2014-2019 Adobe (http://www.adobe.com/), with Reserved Font Name 'Source'.",
+
+	"shsSourceMap": {
+		"defaultRegion": "SourceHanSans",
+		"region": {
+			"cl": "SourceHanSansK",
+			"sc": "SourceHanSansSC",
+			"tc": "SourceHanSansTC",
+			"hc": "SourceHanSansHC",
+			"j" : "SourceHanSans",
+			"k" : "SourceHanSansK",
+			"cn": "SourceHanSansCN",
+			"tw": "SourceHanSansTW",
+			"hk": "SourceHanSansHK",
+			"jp": "SourceHanSansJP",
+			"kr": "SourceHanSansKR"
+		},
+		"style": {
+			"extralight": "ExtraLight",
+			"light": "Light",
+			"normal": "Normal",
+			"regular": "Regular",
+			"medium": "Medium",
+			"bold": "Bold",
+			"heavy": "Heavy"
+		}
+	}
+}
