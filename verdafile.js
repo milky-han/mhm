@@ -166,8 +166,8 @@ const AS0 = file.make(
 	}
 );
 
-const Latin = file.make(
-	(family, style) => `${BUILD}/latin/${family}-${style}.ttf`,
+const Latin0 = file.make(
+	(family, style) => `${BUILD}/latin0/${family}-${style}.ttf`,
 	async (t, { full, dir }, family, style) => {
 		const [config] = await t.need(Config);
 		const latinFamily = config.families[family].latinGroup;
@@ -194,7 +194,7 @@ const Pass1 = file.make(
 		const [config] = await t.need(Config, Scripts);
 		const [, $1, $2, $3] = await t.need(
 			de(dir),
-			Latin(family, style),
+			Latin0(family, style),
 			AS0(family, region, deItalizedNameOf(config, style)),
 			WS0(family, region, deItalizedNameOf(config, style))
 		);
@@ -437,7 +437,7 @@ const MixedTtcPhase1 = file.make(
 			reqs.push(Prod(family, region, style));
 		const [$$] = await t.need(reqs);
 		await run(
-			TTCIZE,
+			TTCIZE, ["--otfccbuild-command=make/common/otfccbuild-cmap4wrapper.py"],
 			["--common-width", config.width * 2, "--common-height", 1000],
 			["-o", full],
 			[...$$.map(t => t.full)]
@@ -462,7 +462,7 @@ const TTCFile = file.make(
 					phase1.push(`${BUILD}/pass2/mixed-phase1/${psName}.ttf`);
 				}
 			await run(
-				TTCIZE,
+				TTCIZE, ["--otfccbuild-command=make/common/otfccbuild-cmap4wrapper.py"],
 				["-x"],
 				["--common-width", config.width * 2, "--common-height", 1000],
 				["-o", full],
@@ -476,7 +476,7 @@ const TTCFile = file.make(
 					reqs.push(Prod(family, region, style));
 			const [$$] = await t.need(reqs);
 			await run(
-				TTCIZE,
+				TTCIZE, ["--otfccbuild-command=make/common/otfccbuild-cmap4wrapper.py"],
 				mode == "gap" ? ["-x"] : [],
 				["--common-width", config.width * 2, "--common-height", 1000],
 				["-o", full],

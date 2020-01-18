@@ -22,7 +22,7 @@ if __name__ == "__main__":
 		new = {}
 
 	old.update(new)
-	data = json.dumps(old).encode()
+	data = json.dumps(old, separators = (',', ':')).encode()
 
 	with open(args.old, 'wb') as oldFile:
 		oldFile.write(data)
