@@ -627,7 +627,7 @@ async function SanitizeTTF(target, ttf) {
 		"--hinting-limit=48",
 		"--hinting-range-min=7", "--hinting-range-max=48",
 		"--no-info",
-		"--increase-x-height=0",
+		"--increase-x-height=14",
 		tmpTTF2, target
 	);
 	await rm(ttf);

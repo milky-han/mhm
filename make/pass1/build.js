@@ -3,7 +3,7 @@
 const { rebase, introduce, build, gc, merge } = require("megaminx");
 
 const italize = require("../common/italize");
-const { nameFont, setHintFlag } = require("./metadata.js");
+const { nameFont, setHintFlag, setHeight } = require("./metadata.js");
 
 const fs = require("fs-extra");
 const path = require("path");
@@ -19,7 +19,7 @@ async function pass(ctx, config, argv) {
 		ignoreHints: true
 	});
 
-	let glyphA = a.glyf[a.cmap["65"]];
+	const glyphA = a.glyf[a.cmap["65"]];
 	if (globalConfig.width != glyphA.advanceWidth)
 		await ctx.run(rebase, "a", { scale: globalConfig.width / glyphA.advanceWidth });
 	a.head.unitsPerEm = 1000;
@@ -46,6 +46,7 @@ async function pass(ctx, config, argv) {
 	const subfamily = globalConfig.subfamilies[argv.subfamily].name;
 	const style = globalConfig.styles[argv.style].name;
 	await ctx.run(setHintFlag, "a");
+	await ctx.run(setHeight, "a", globalConfig.height);
 	await ctx.run(
 		nameFont,
 		"a",

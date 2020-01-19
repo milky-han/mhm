@@ -134,3 +134,17 @@ async function setHintFlag(ctx, demand) {
 	font.head.flags.instrMayDependOnPointSize = true;
 }
 exports.setHintFlag = setHintFlag;
+
+async function setHeight(ctx, demand, height) {
+	const font = this.items[demand];
+	font.hhea.ascender = height.ascender;
+	font.hhea.descender = height.descender;
+	font.hhea.lineGap = 0;
+	font.OS_2.usWinAscent = height.ascender;
+	font.OS_2.usWinDescent = -height.descender;
+	font.OS_2.sTypoAscender = 880;
+	font.OS_2.sTypoDescender = -120;
+	font.OS_2.sTypoLineGap = height.ascender - height.descender - 1000;
+	font.OS_2.fsSelection.useTypoMetrics = true;
+}
+exports.setHeight = setHeight;

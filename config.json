@@ -1,6 +1,17 @@
 {
-	"width_comment": "em size = 1000, regardless of source font’s",
+	"width_and_height_comment": "em size = 1000, regardless of source font’s",
 	"width": 600,
+	"height": {
+		"ascender_descender_comment": "(`ascender` - `descender`) is considered to be larger than (2 * `width`), making line gap larger than tracking",
+		"ascender_comment": "> 880 to avoid clipping on CJK",
+		"ascender": 1000,
+		"descender_comment": "< -200 to avoid clipping on LCG",
+		"descender": -250,
+		"typoAscender_comment": "implicit to 880",
+		"typoDescender_comment": "implicit to -120",
+		"typoLineGap_comment": "implicit to (`ascender` - `descender` - 1000)",
+		"useTypoMetrics_comment": "set to `true`"
+	},
 
 	"familyOrder": [ "mono", "term" ],
 	"family_property_comment": {
