@@ -8,11 +8,11 @@ Milky Han Mono, is not only a duospaced CJK programming font family, but also a 
 
 ## Get Milky Han Mono
 
-See [the download guild](doc/download.md).
+See [the download guide](doc/download.md).
 
 ## Create your programming font
 
-See [the guild for building with alternative Latin font](doc/customization.md).
+See [the guide for building with alternative Latin font](doc/customization.md).
 
 ## Credits
 
