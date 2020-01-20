@@ -100,7 +100,6 @@ async function nameFont(ctx, demand, selectorList, encodings, namings) {
 	font.name = nameTable;
 
 	// Set fsSelection
-	font.OS_2.fsSelection.useTypoMetrics = true;
 	font.OS_2.fsSelection.wws = false;
 	// clear achVendID
 	font.OS_2.achVendID = "????";
@@ -145,7 +144,7 @@ async function setHeight(ctx, demand, height) {
 	font.OS_2.sTypoAscender = 880;
 	font.OS_2.sTypoDescender = -120;
 	font.OS_2.sTypoLineGap = height.ascender - height.descender - 1000;
-	font.OS_2.fsSelection.useTypoMetrics = true;
+	font.OS_2.fsSelection.useTypoMetrics = false;
 }
 exports.setHeight = setHeight;
 
