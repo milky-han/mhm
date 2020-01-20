@@ -1,6 +1,6 @@
 {
 	"name": "milky-han",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"main": "./run",
 	"dependencies": {
 		"@chlorophytum/cli": "^0.3.5",

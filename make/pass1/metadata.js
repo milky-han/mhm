@@ -148,3 +148,18 @@ async function setHeight(ctx, demand, height) {
 	font.OS_2.fsSelection.useTypoMetrics = true;
 }
 exports.setHeight = setHeight;
+
+// fonts instanced from VF may have improper fsSelection
+async function fixFontLink(ctx, demand) {
+	const font = this.items[demand];
+	if (font.OS_2.usWeightClass !== 400)
+		font.OS_2.fsSelection.regular = false;
+	if (font.OS_2.usWeightClass === 700) {
+		font.OS_2.fsSelection.bold = true;
+		font.head.macStyle.bold = true; // unnecessary, but fonttools checks it
+	}
+	if (font.OS_2.fsSelection.italic) {
+		font.head.macStyle.italic = true; // unnecessary, but fonttools checks it
+	}
+}
+exports.fixFontLink = fixFontLink;
